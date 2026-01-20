@@ -366,14 +366,19 @@ section:nth-child(even) {
 /* Sección de contacto oscura */
 #contacto {
     background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%) !important;
+    border-top: 3px solid #d4af37;
+    position: relative;
 }
 
 #contacto .section-title {
     color: #d4af37;
+    padding-bottom: 1.5rem;
 }
 
 #contacto .section-title::after {
     background: #d4af37;
+    width: 100%;
+    left: 0;
 }
 
 /* Footer */
@@ -523,6 +528,23 @@ section {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Estilos para dirección y teléfono en móvil */
+.direccion-telefono {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 576px) {
+    .direccion-telefono {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+
+    .direccion-telefono br {
+        content: '';
+    }
 }
 
 /* Mejorar legibilidad en pantallas pequeñas */
